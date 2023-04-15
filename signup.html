@@ -65,30 +65,119 @@
 
   <!-- Head -->
 
-<body>
-    <form method="post" action="" class="login">
-        <header>Create an Account</header>
-        <div class="input">
-            <input type="text" placeholder="First Name">
-        </div>
-        <div class="input">
-            <input type="text" placeholder="Last Name">
-        </div>
-        <div class="input">
-            <input type="text" placeholder="Email address">
-        </div>
-        <div class="input">
-            <input type="password" placeholder="Password">
-        </div>
-        <div class="input">
-            <input type="password" placeholder="Confirm Password">
-        </div>
-        <div class="forget">
-           <input type="checkbox"> I Agree <a href="" class="forget">Terms and conditions.</a>
-        </div>
-        <input type="submit" class="submit" value="SIGN UP">
-          </div>
-          <span class="dont">Already have an account? <a href="login.html" class="signup">Login</a></span>
+  <body>
+    <!-- navbars -->
+      <divg class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="index.html">
+        <img
+          src="re2.png"
+          width="250"
+          height="70"
+          class="FureverHomemainlogo"
+          alt=""
+        />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="adopt.html">Adopt</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="report.html">Report</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="register.html">Register</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="login.html">Login</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="signup.html"><u>Sign up</u></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    </div>
+    
+
+  <!-- navbars  -->
+
+    <form class="login" onsubmit="event.preventDefault(); signUp();">
+      <header>Create an Account</header>
+      <div class="input">
+        <input type="text" placeholder="First Name" id="firstName" />
+      </div>
+      <div class="input">
+        <input type="text" placeholder="Last Name" id="lastName" />
+      </div>
+      <div class="input">
+        <input type="text" placeholder="Email address" id="email" />
+      </div>
+      <div class="input">
+        <input type="password" placeholder="Password" id="password" />
+      </div>
+      <div class="input">
+        <input
+          type="password"
+          placeholder="Confirm Password"
+          id="confirmPassword"
+        />
+      </div>
+      <div class="forget">
+        <input type="checkbox" /> I Agree
+        <a href="" class="forget">Terms and conditions.</a>
+      </div>
+      <input type="submit" class="submit" value="SIGN UP" onclick="{signUp}" />
+
+      <span class="dont"
+        >Already have an account?
+        <a href="login.html" class="signup">Login</a></span
+      >
     </form>
-</body>
+  </body>
+
+  <script>
+    function signUp(event) {
+      let firstName = document.getElementById("firstName").value;
+      let lastName = document.getElementById("lastName").value;
+      let email = document.getElementById("email").value;
+      let password = document.getElementById("password").value;
+      let confirmPassword = document.getElementById("confirmPassword").value;
+      console.log({
+        firstName,
+        lastName,
+        email,
+        password,
+      });
+      if (password !== confirmPassword) {
+        // password not match
+      }
+      let users = localStorage.getItem("users")
+        ? JSON.parse(localStorage.getItem("users"))
+        : [];
+      let user = {
+        firstName,
+        lastName,
+        email,
+        password,
+      };
+      users.push(user);
+      localStorage.setItem("users", JSON.stringify(users));
+    }
+  </script>
 </html>

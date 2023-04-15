@@ -20,13 +20,95 @@ body{
     text-shadow: 0px 0px 5px rgba(0,0,0,0.8);
     text-align: center;
   }
-  .card-img-top{
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* .card-img-top{
     width: 20%;
   }
   .card{
     width:80%;
+  } */
+
+
+
+
+
+
+
+.dog-card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
-  #footer{
+  
+.dog-card {
+    width: 23%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+.dog-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+.dog-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+.dog-card p {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+.dog-card button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+
+.dog-card button:hover {
+    background-color: #0062cc;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+#footer{
     text-align: center;
     height: 50px;
     margin: 2% 0 2% 0 ;

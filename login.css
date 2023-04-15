@@ -9,19 +9,21 @@ body {
 }
 
 .login{
-  display:flex;
-  flex-direction: column;
+  
+
   align-items: center;
   margin:15px 0;
   width:380px;
   padding:30px;
+  position: relative;
+  left: 40%;
   letter-spacing:1px;
   background-color:rgba(0,0,0,0.7);
   color:#fff;
   box-shadow:-4px 4px 12px 10px rgba(0,0,0,0.4);
 }  
 .login header{
-  margin:0 0 35px 0;
+  margin:0 0 35px 100px;
   font-weight: 600;
   font-size: 33px;
 }
@@ -89,4 +91,17 @@ input:hover{
 }
 .signup:hover{
   text-decoration: underline;
+}
+body{
+  padding: 1%;
+}
+.navbar{
+  margin: 1% 2% 2% ;
+  position: relative;
+  bottom: 20%;
+  text-align: center;
+}
+
+.active{
+  font-weight: bolder;
 }
