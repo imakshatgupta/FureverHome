@@ -1,0 +1,177 @@
+body{
+    padding: 1%;
+}
+.navbar{
+    margin: 2% 0 5% ;
+    position: fixed;
+}
+
+.active{
+    font-weight: bolder;
+}
+
+.jumbotron {
+    background-image: url("h1.png");
+    
+    background-size:contain;
+    background-repeat: repeat;
+    background-position: center center;
+    font-size: x-large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #eaece4;
+    padding: 200px 240px 232px;
+    top: 175px;
+    bottom: 520px;
+  }
+
+.title-image{
+    width: 75%;
+    
+}
+.steps-heading{
+    text-align: center;
+    padding: 8px 0px 58px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 3.5rem;
+}
+
+.icon{
+    color: #000;
+    margin-bottom: 1rem;
+    padding:10px 5px 0px 0px;
+}
+
+
+.fas{
+    width: 6%;
+}
+
+.step1{
+    padding-bottom: 3%;
+    padding-right: 30%;
+}
+
+.adoptlove{
+    background-color: orange ;
+    text-align: center;
+}
+
+.title-image2{
+    width: 20%;
+    text-align: center;
+    position: absolute;
+    left: 30%;
+    top: 50%;
+}
+
+.adop{
+    text-align: left;
+    top: 30%;
+    padding-top: 70px;
+    right: 50px;
+}
+
+.adopt-heading{
+    text-align: center;
+    /* padding: 18px 0px 8px; */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.5rem;
+}
+
+.btn{
+    padding: 2px 15px;
+    width: 200px;
+    height: 45px;
+    margin: 20px;
+    text-align: center;
+
+}
+
+#features{
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.icon41{
+    color: #3ac6ba;
+    margin-bottom: 1rem;
+    padding:10px 5px 0px 0px;
+}
+
+.icon42{
+    color: #3ac6ba;
+    margin-bottom: 1rem;
+    padding:10px 5px 0px 0px;
+}
+
+.icon43{
+    color: #3ac6ba;
+    margin-bottom: 1rem;
+    padding:10px 5px 0px 0px;
+}
+
+
+.icon41:hover{
+    color: #e20a27;
+}
+.icon42:hover{
+    color: orange;
+}
+.icon43:hover{
+    color: #d4e1e0;
+}
+
+.icon5{
+    color: #000;
+}
+.icon5:hover{
+    color: #000;
+}
+
+#testimonials{
+    color:#fff ;
+    text-align: center;
+    background-color: #ef8172;
+}
+h2{
+    font-family: "Montserrat-Black";
+    font-size: 1.5rem;
+    line-height: 1;
+}
+.test-dog{
+    border-radius: 100%;
+    width: 200px;
+    padding: 20px ;
+}
+.carousel-inner{
+    padding: 2% 8%;
+}
+
+#footer{
+    text-align: center;
+    height: 50px;
+    margin: 2% 0 2% 0 ;
+}
+
+.icon{
+    color: #000;
+    margin-bottom: .5rem;
+    padding:10px 10px 0px 10px;
+}
+.icontwit:hover{
+    color:#1DA1F2
+    ;
+}
+.iconface:hover{
+    color:#4267B2
+    ;
+}
+.iconinsta:hover{
+    color:#FFC0CB
+    ;
+}
+.iconenv:hover{
+    color:#F4B400
+    ;
+}
