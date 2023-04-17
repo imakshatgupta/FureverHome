@@ -99,10 +99,7 @@
             <a class="nav-link" href="register.html">Register</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="login.html">Login</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="signup.html">Sign up</a>
+            <p class="nav-link" id="username"></p>
           </li>
         </ul>
       </div>
@@ -121,53 +118,80 @@
 
     <!-- jumbotron -->
 
-    <form action="submit-form.php" method="POST" enctype="multipart/form-data">
+    <form class="register" onsubmit="event.preventDefault(); report();">
       <label for="name">Your Name:</label>
-      <input type="text" name="name" id="name" required>
-  
+      <input type="text" name="name" id="name" required />
+
       <label for="email">Email Address:</label>
-      <input type="email" name="email" id="email" required>
-  
+      <input type="email" name="email" id="email" required />
+
       <label for="phone">Phone Number:</label>
-      <input type="tel" name="phone" id="phone" required>
-  
+      <input type="tel" name="phone" id="phone" required />
+
       <label for="address">Location of Dog:</label>
-      <textarea name="address" id="address" required></textarea><br>
-  
-  
+      <textarea name="address" id="address" required></textarea><br />
+
       <label for="dog-image">Dog Image:</label>
-      <input type="file" name="dog-image" id="dog-image" accept="image/x-png,image/gif,image/jpeg" required><br><br>
-  
+      <input
+        type="file"
+        name="dog-image"
+        id="dog-image"
+        accept="image/x-png,image/gif,image/jpeg"
+        required
+      /><br /><br />
+
       <label for="dog-info">Describe the Problem: </label>
       <textarea name="dog-info" id="dog-info"></textarea>
-      <input type="submit" value="Submit">
+      <input type="submit" value="Submit" class="submit" onclick="{report}" />
     </form>
-
-
-
 
     <!-- footer -->
 
-  <footer id="footer">
-    <a href="https://twitter.com/home" target="_blank"
-      ><i class="icontwit icon fab fa-twitter fa-2x"></i
-    ></a>
-    <a href="https://www.facebook.com/home " target="_blank"
-      ><i class="iconface fab icon fa-facebook fa-2x"></i
-    ></a>
-    <a href="https://instagram.com" target="_blank"
-      ><i class="iconinsta fab icon fa-instagram fa-2x"></i
-    ></a>
-    <a
-      href="https://mail.google.com/mail/u/0/#inbox?compose=new"
-      target="_blank"
-      ><i class="iconenv fa icon fa-envelope fa-2x"></i
-    ></a>
+    <footer id="footer">
+      <a href="https://twitter.com/home" target="_blank"
+        ><i class="icontwit icon fab fa-twitter fa-2x"></i
+      ></a>
+      <a href="https://www.facebook.com/home " target="_blank"
+        ><i class="iconface fab icon fa-facebook fa-2x"></i
+      ></a>
+      <a href="https://instagram.com" target="_blank"
+        ><i class="iconinsta fab icon fa-instagram fa-2x"></i
+      ></a>
+      <a
+        href="https://mail.google.com/mail/u/0/#inbox?compose=new"
+        target="_blank"
+        ><i class="iconenv fa icon fa-envelope fa-2x"></i
+      ></a>
 
-    <p>© Copyright FureverHome</p>
-  </footer>
+      <p>© Copyright FureverHome</p>
+    </footer>
 
-  <!-- footer -->
+    <!-- footer -->
 
   </body>
+
+
+
+
+
+
+
+  <script>
+function report(event) {
+      window.open("reportcom.html", "_self");
+    }
+
+let username = document.getElementById("username");
+let currentUser = JSON.parse(localStorage.getItem("currentUser"));
+
+if (currentUser) {
+  console.log(currentUser[0]);
+  username.innerText = "Hii! "+currentUser[0].firstName;
+}
+  </script>
+
+
+
+
+
 </html>

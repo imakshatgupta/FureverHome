@@ -24,7 +24,13 @@ body{
 
 
 
-
+  #username{
+    font-size: 2rem;
+    text-align: center;
+    position: relative;
+    bottom: 17%;
+    color: #3ac6ba;
+}
 
 
 

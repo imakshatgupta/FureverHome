@@ -2,6 +2,14 @@ body{
     padding: 1%;
     font-family: Arial, sans-serif;
 }
+
+#username{
+    font-size: 2rem;
+    text-align: center;
+    position: relative;
+    bottom: 17%;
+    color: #3ac6ba;
+}
 .navbar{
     margin: 2% 0 5% ;
     position: fixed;
