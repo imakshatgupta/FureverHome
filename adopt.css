@@ -141,3 +141,23 @@ body{
     color:#F4B400
     ;
 }
+
+
+@media (max-width:580px){
+  .dog-card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    text-align: center;
+  }
+.dog-card {
+    width: 83%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+}

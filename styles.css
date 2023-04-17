@@ -66,7 +66,7 @@ body{
 }
 
 .title-image2{
-    width: 20%;
+    width: 40%;
     text-align: center;
     position: absolute;
     left: 30%;
@@ -182,4 +182,105 @@ h2{
 .iconenv:hover{
     color:#F4B400
     ;
+}
+
+
+
+@media (min-width:767px) and (max-width: 992px){
+ 
+.title-image2{
+    text-align: center;
+    position: absolute;
+position:static;
+width: 90%;
+
+}
+.step1 , .icon {
+    text-align: center;
+    padding-right:0 ;
+}
+.title-image{
+position: relative;
+left: 60px;
+margin-bottom:90px ;}
+
+}
+
+
+
+@media (min-width:467px) and (max-width: 766px){
+    .adop{
+    text-align: center;
+   position: relative;
+    left: 0.5px;
+}
+.title-image2{
+    text-align: center;
+    position: absolute;
+
+
+position:static;
+width: 50%;
+
+}
+.step1 , .icon {
+    text-align: center;
+    padding-right:0 ;
+}
+.title-image{
+position: relative;
+left: 60px;
+margin-bottom:90px ;}
+
+}
+
+
+
+
+@media (max-width: 466px){
+
+    .navbar{
+        margin: 1% 0 2% ;
+        position: absolute;
+    }
+    .navbar-brand{
+        width: 10%;
+    }
+    .jumbotron {
+    background-image: url("h1.png");
+    
+    background-size:contain;
+    background-repeat: repeat;
+    background-position: center center;
+    font-size: x-large;
+    color: #eaece4;
+    padding: 100px 180px 100px;
+    top: 175px;
+    bottom: 520px;
+  }
+  .steps-heading{
+    font-size: 2rem;
+  }
+ 
+    .adop{
+    text-align: center;
+   position: relative;
+    left: 0.5px;
+}
+.title-image2{
+    text-align: center;
+    /* position: absolute; */
+    position:static;
+width: 50%;
+left: 170px;
+}
+.step1 , .icon {
+    text-align: center;
+    padding-right:0 ;
+}
+.title-image{
+position: relative;
+left: 60px;
+}
+
 }

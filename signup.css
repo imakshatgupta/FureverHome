@@ -106,3 +106,19 @@ body {
 .active{
     font-weight: bolder;
 }
+
+
+@media (max-width:400px){
+  .login{
+    align-items: center;
+    margin:15px 0;
+    width:380px;
+    padding:30px;
+    position: relative;
+    left: 2%;
+    letter-spacing:1px;
+    background-color:rgba(0,0,0,0.7);
+    color:#fff;
+    box-shadow:-4px 4px 12px 10px rgba(0,0,0,0.4);
+  }  
+}
