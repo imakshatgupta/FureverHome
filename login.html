@@ -150,7 +150,7 @@
       );
       console.log(user);
       if (user.length) {
-        window.open("/", "_self");
+        window.open("index.html", "_self");
         localStorage.setItem("isLoggedIn", true);
         localStorage.setItem("currentUser", JSON.stringify(user));
       } else {
