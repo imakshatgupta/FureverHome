@@ -1,15 +1,61 @@
+.rounded-box {
+    border-radius: 50%; 
+    width: 50px; 
+    height: 50px; 
+    background-color: #e7d0a4; 
+    display: none;
+    justify-content:space-evenly;
+    align-items: center;
+    position: relative;
+    bottom: 5px;
+  }
+
+  .log{
+    position: relative;
+    top: 50px;
+    left: 61px;
+}
+  
+.log:hover{
+    cursor: pointer;
+}
+@media (max-width:400px){
+    .log{
+        top:55px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 body{
     padding: 1%;
         font-family: 'Open Sans', sans-serif;
     
 }
 #username{
-    font-size: 2rem;
+    font-size: 2.5rem;
     text-align: center;
     position: relative;
-    bottom: 17%;
     color: #3ac6ba;
-    
+    top: 6px;
 
 }
 .navbar{

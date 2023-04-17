@@ -99,8 +99,10 @@
             <a class="nav-link" href="register.html"><u>Register</u></a>
           </li>
           <li class="nav-item active">
-            <p class="nav-link" id="username"></p>
-          </li>
+            <div class="rounded-box" id="rounded">
+              <p class="nav-link text" id="username"></p>
+            </div>
+            </li>
         </ul>
       </div>
     </nav>
@@ -207,10 +209,14 @@
 
     let username = document.getElementById("username");
     let currentUser = JSON.parse(localStorage.getItem("currentUser"));
+    let rounded = document.getElementById("rounded");
+
 
     if (currentUser) {
       console.log(currentUser[0]);
-      username.innerText = "Hii! " + currentUser[0].firstName;
+      username.innerText =currentUser[0].firstName.substring(0,1);
+      rounded.setAttribute("style", "display:flex")
+
     }
   </script>
 
