@@ -102,7 +102,7 @@
             <div class="rounded-box" id="rounded">
               <p class="nav-link text" id="username"></p>
             </div>
-            </li>
+          </li>
         </ul>
       </div>
     </nav>
@@ -169,33 +169,21 @@
     </footer>
 
     <!-- footer -->
-
   </body>
 
-
-
-
-
-
-
   <script>
-function report(event) {
+    function report(event) {
       window.open("reportcom.html", "_self");
     }
 
-let username = document.getElementById("username");
-let currentUser = JSON.parse(localStorage.getItem("currentUser"));
-let rounded = document.getElementById("rounded");
+    let username = document.getElementById("username");
+    let currentUser = JSON.parse(localStorage.getItem("currentUser"));
+    let rounded = document.getElementById("rounded");
 
-if (currentUser) {
-  console.log(currentUser[0]);
-  username.innerText =currentUser[0].firstName.substring(0,1);
-  rounded.setAttribute("style", "display:flex")
-}
+    if (currentUser) {
+      console.log(currentUser[0]);
+      username.innerText = currentUser[0].firstName.substring(0, 1);
+      rounded.setAttribute("style", "display:flex");
+    }
   </script>
-
-
-
-
-
 </html>

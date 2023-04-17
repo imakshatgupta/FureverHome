@@ -119,28 +119,29 @@
     <form class="login" onsubmit="event.preventDefault(); signUp();">
       <header>Create an Account</header>
       <div class="input">
-        <input type="text" placeholder="First Name" id="firstName" required/>
+        <input type="text" placeholder="First Name" id="firstName" required />
       </div>
       <div class="input">
-        <input type="text" placeholder="Last Name" id="lastName" required/>
+        <input type="text" placeholder="Last Name" id="lastName" required />
       </div>
       <div class="input">
-        <input type="text" placeholder="Email address" id="email" required/>
+        <input type="text" placeholder="Email address" id="email" required />
       </div>
       <div class="input">
-        <input type="password" placeholder="Password" id="password" required/>
+        <input type="password" placeholder="Password" id="password" required />
       </div>
       <div class="input">
         <input
           type="password"
           placeholder="Confirm Password"
           id="confirmPassword"
-        required/>
+          required
+        />
       </div>
 
       <div class="forget">
         <p id="signupError"></p>
-        <input type="checkbox" required/> I Agree
+        <input type="checkbox" required /> I Agree
         <a href="" class="forget">Terms and conditions.</a>
       </div>
       <input type="submit" class="submit" value="SIGN UP" onclick="{signUp}" />
