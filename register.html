@@ -123,33 +123,33 @@
 
     <!-- jumbotron -->
 
-    <form class="register" onsubmit="event.preventDefault(); register();">
+    <form class="register" name="submit-to-google-sheet">
       <label for="name">Your Name:</label>
-      <input type="text" name="name" id="name" required />
+      <input type="text" name="Name" id="name" required />
 
       <label for="email">Email Address:</label>
-      <input type="email" name="email" id="email" required />
+      <input type="email" name="Email" id="email" required />
 
       <label for="phone">Phone Number:</label>
-      <input type="tel" name="phone" id="phone" required />
+      <input type="tel" name="Phone_Number" id="phone" required />
 
       <label for="address">Address:</label>
-      <textarea name="address" id="address" required></textarea>
+      <textarea name="Address" id="address" required></textarea>
 
       <label for="dog-name">Dog Name:</label>
-      <input type="text" name="dog-name" id="dog-name" required />
+      <input type="text" name="Dog_Name" id="dog-name" required />
 
       <label for="dog-age">Dog Age:</label>
-      <input type="text" name="dog-age" id="dog-age" required />
+      <input type="text" name="Dog_Age" id="dog-age" required />
 
       <label for="dog-breed">Dog Breed:</label>
-      <input type="text" name="dog-breed" id="dog-breed" required />
+      <input type="text" name="Dog_Breed" id="dog-breed" required />
 
       <label for="dog-gender">Dog Gender:</label>
-      <select name="dog-gender" id="dog-gender" required>
+      <select name="Dog_Gender" id="dog-gender" required>
         <option value="">Please select</option>
-        <option value="Male">Male</option>
-        <option value="Female">Female</option></select
+        <option value="Male" name="Gender">Male</option>
+        <option value="Female" name="Gender">Female</option></select
       ><br />
 
       <label for="dog-image">Dog Image:</label>
@@ -162,13 +162,30 @@
       /><br /><br />
 
       <label for="dog-info">Additional Information:</label>
-      <textarea name="dog-info" id="dog-info"></textarea><br />
+      <textarea name="Additional_Information" id="dog-info"></textarea><br />
 
       <input type="checkbox" name="terms" id="terms" required />
       <label for="terms">I agree to the terms and conditions.</label>
 
-      <input type="submit" value="Submit" class="submit" onclick="{register}" />
+      <input type="submit" value="Submit" class="submit"  />
     </form>
+
+
+     <script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbzxnGwSKcY8YYpEHSBWOLJ-xrlKDb9THTTyO6RMRvoQjc_hSAstvmNUVeJW78h5RMgB/exec'
+  const form = document.forms['submit-to-google-sheet']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        register();
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+
+
 
     <!-- footer -->
 
