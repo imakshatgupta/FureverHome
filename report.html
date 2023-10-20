@@ -120,18 +120,18 @@
 
     <!-- jumbotron -->
 
-    <form class="register" onsubmit="event.preventDefault(); report();">
+    <form class="register" name="submit-to-google-sheet" >
       <label for="name">Your Name:</label>
-      <input type="text" name="name" id="name" required />
+      <input type="text" name="Name" id="name" required />
 
       <label for="email">Email Address:</label>
-      <input type="email" name="email" id="email" required />
+      <input type="email" name="Email" id="email" required />
 
       <label for="phone">Phone Number:</label>
-      <input type="tel" name="phone" id="phone" required />
+      <input type="tel" name="Phone_Number" id="phone" required />
 
       <label for="address">Location of Dog:</label>
-      <textarea name="address" id="address" required></textarea><br />
+      <textarea name="Location_of_Dog" id="address" required></textarea><br />
 
       <label for="dog-image">Dog Image:</label>
       <input
@@ -143,9 +143,25 @@
       /><br /><br />
 
       <label for="dog-info">Describe the Problem: </label>
-      <textarea name="dog-info" id="dog-info"></textarea>
-      <input type="submit" value="Submit" class="submit" onclick="{report}" />
+      <textarea name="Describe_the_Problem" id="dog-info"></textarea>
+      <input type="submit" value="Submit" class="submit"  />
     </form>
+
+
+    <script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbxthL6EmG_DvwGq5hLAFxUmctRtIIl56x96Pzunm7yfiW5qyGOJrF4ImNTZ9X8ozjAQ/exec'
+  const form = document.forms['submit-to-google-sheet']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        report();
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+
 
     <!-- footer -->
 
